@@ -202,19 +202,16 @@
 
 
 //short-services
-.short-services{
-	background-image: url('../img/bg/bg-services.jpg');
-	background-size: cover;
-}
 .short-services-items{
 	figure{
 		text-align: center;
 		.wrapper{
 			padding: 15px 10px;
+			box-shadow: 0 3px 1px 0px transparent;
 			background-color: rgba(white, 0.2);
-			height: 220px;
 			transition: 0.3s;
 			overflow: hidden;
+			height: 100%;
 		}
 		.img-content{
 			position: relative;
@@ -236,11 +233,14 @@
 		&:hover{
 			.wrapper{
 				background-color: white;
-				color: $color-1;
+				//color: $color-1;
 				.mirror{
 					opacity: 1;
 				}
 			}
+		}
+		@media (min-width: 992px) {
+			height: 220px;
 		}
 	}
 }
@@ -456,6 +456,144 @@
 
 
 
+//about
+.about{
+	.short-about-carousel{
+		@media (min-width: 992px) {
+			.carousel-items .flickity-prev-next-button{
+				&.previous{
+					left: inherit;
+					right: 0;
+				}
+				&.next{
+					left: inherit;
+					right: -30px;
+				}
+			}
+		}
+	}
+}
+.staff-items{
+	.desc-content{
+		background-color: $bg-color-gray;
+	}
+}
+.vacancies{
+	.tab-list{
+		text-align: center;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		ul{
+
+		}
+		li{
+			display: inline-block;
+			font-weight: 700;
+			&.active{
+				color: $color-1;
+			}
+			a{
+				display: inline-block;
+				padding: 10px 30px;
+			}
+		}
+	}
+}
+
+.vacancies-form{
+	input, textarea{
+		border-radius: 10px;
+	}
+	textarea{
+		min-height: 143px;
+	}
+	.btn-content{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		.btn-def{
+			margin: 5px 0;
+			width: 100%;
+			a, button, .btn-this{
+				padding: 11px 30px;
+			}
+			&.reverse{
+				background-color: #367ec8;
+			}
+			&:hover{
+				background-color: black;
+			}
+		}
+	}
+}
 
 
 
+
+
+//services
+.services{
+	.short-services{
+		//height: 600px;
+	}
+	.short-services-items{
+	
+		.desc-text{
+			height: 70px;
+			overflow: hidden;
+		}
+		
+		.wrapper{
+			
+		}
+		.img.mirror{
+			opacity: 1;
+		}
+		@media (min-width: 992px) {
+			figure{
+				&:hover{
+					.wrapper{
+						box-shadow: 0 3px 22px -7px black;
+						height: 270px;
+					}
+					.payment-content{
+						opacity: 1;
+					}
+				}
+			}
+			.wrapper{
+				position: absolute;	
+			}
+			.payment-content{
+				opacity: 0;
+			}
+		}
+		@media (max-width: 991px) {
+			.desc-text{
+				height: auto;
+			}
+		}
+	}
+	.payment-content{
+    z-index: 1;
+    background-color: white;
+    transition: .3s;
+    padding: 15px 0;
+    position: absolute;
+    
+    bottom: 0;
+    width: 100%;
+    left: 0;
+		.price{
+			line-height: 100%;
+			color: $color-1;
+			font-size: 26px;
+			font-weight: 700;
+		}
+		@media (max-width: 991px) {
+			position: relative;
+		}
+	}
+}
+.discounts-content{
+	height: 330px;
+}

@@ -17,6 +17,7 @@
 	background-position-y: center;
 	background-size: cover;
 	transition: 0.4s;
+	overflow: hidden;
 	@media (min-width: 992px) {
 		filter: grayscale(1);
 		&:hover{

@@ -23,7 +23,7 @@ $color-gray-2: #b7b7b7;
 $color-gray-3: #757575;
 
 $bg-color-black: #000;
-$bg-color-gray: #363636;
+$bg-color-gray: #fafafa;
 
 
 
@@ -252,57 +252,37 @@ html{
 .table-content{
 	overflow-x: auto;
 }
+.table > thead > tr > th, table > thead > tr > th, .table > thead > tr > td, table > thead > tr > td, .table > tbody > tr > th, table > tbody > tr > th, .table > tbody > tr > td, table > tbody > tr > td, .table > tfoot > tr > th, table > tfoot > tr > th, .table > tfoot > tr > td, table > tfoot > tr > td{
+	padding: 30px;
+}
 table { 
+	border-collapse: collapse;
 	width: 100%;
-	//@extend .table; 
-	border-spacing: 0;
-
-	caption{
-		color: $color-1;
-		padding: 15px 10px;
-		font-size: 1.45em;
-		font-weight: 700;
+	text-align: left;
+	@extend .table; 
+	a{
+		&:hover{
+			text-decoration: underline;
+		}
 	}
 	th{
-		//border-right: 1px solid;
-		//background-color: rgba($color-1, 1);
-		color: white;
+		background-color: rgba($color-gray-1, 1);
+		padding-top: 30px;
+		color: black;
 	}
 	td{
-		padding: 15px 10px;
-		border: 1px solid rgba($color-gray-2, 0.3);
-		vertical-align: middle;
+		border-color: rgba($color-gray-1, 1) !important;
 	}
 	tbody{
 		tr:nth-child(odd){
-			//background-color: rgba($color-1, 0.1);
+			background-color: rgba($color-gray-1, 0.4);
 		}
 		tr:nth-child(even){
-			//background-color: rgba($color-1, 0.1);
-		}
-		td:nth-child(1){
-			border-left: 0;
-			font-weight: 600;
-			@media (max-width: 991px) {
-				min-width: 240px;
-			}
-		}
-		td:nth-child(2){
-			border-right: 0;
-			color: $color-gray-3;
+			background-color: rgba($color-gray-1, 0.0);
 		}
 	}
-	@media (max-width: 991px) {
-		caption{
-			text-align: center;
-		}
-		td{
-			display: block;
-		}
-	}
+
 }
-
-
 
 
 
@@ -575,7 +555,7 @@ table {
 	white-space: nowrap;
 	text-align: center;	
 	border-radius: 10px;
-	font-family: $font-family-1;
+	font-family: $font-family-2;
 	&.text-wrap{
 		white-space: wrap;
 	}
@@ -1064,7 +1044,7 @@ hr{
 }
 
 .pie-form-control{
-	border: 0px solid $color-gray-2;
+	border: 1px solid rgba($color-gray-2, 0.3);
 	//border-bottom-color: white;
 	background-color: white;
 	//border-radius: 30px;

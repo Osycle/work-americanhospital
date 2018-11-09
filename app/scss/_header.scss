@@ -205,8 +205,9 @@ $header-min-menu: 70px;
 				.sub-menu-1,{
 					transform: none;transform: unset;
 					opacity: 1;
-					&, *{
-						pointer-events: auto;
+					//visibility: visible;
+					&, li, a{
+						pointer-events: auto !important;
 					}
 					transition: 
 											opacity 0.3s ease-in-out,
@@ -253,12 +254,12 @@ ul[class*="sub"]{
 	white-space: normal;
 	//border-radius: 10px;
 	padding: 3px 5px;
-	//width: 200px;
+	//visibility: hidden;
 	transform: matrix(1,0,0,1,0,7);
 	transform-origin: 40% 0;
 	text-align: left;
-	&, *{
-		pointer-events: none;
+	&, li, a{
+		pointer-events: none !important;
 	}
 	li{
 		font-size: em(15, 16);
@@ -280,11 +281,11 @@ ul[class*="sub"]{
 	a{
 		display: block;
 		transition: all 0.3s ease-in-out;
-		color: $color-gray-1;
+		color: $color-1;
 		padding: 10px 5px;
 		//white-space: nowrap;
 		&:hover{
-			color: $color-1;
+			transform: translateX(3px);
 		}
 	}
 }
