@@ -125,22 +125,31 @@
 }
 
 
-@mixin boxes-items( $width: 75, $item: 3, $tag: figure ) {
-
-	$mrow : ( (100 - $width)/($item*2) );
+@mixin boxes-items( $width: 75, $items: 3, $tag: figure ) {
 
 	letter-spacing: -5px;
 	*{
 		letter-spacing: 0;
 	}
+
+
+	$mrow: 1.29;
+	//$mrow : ( (100 - $width)/($items*2) );
+	$wid: (100-$mrow*($items*2))/$items;
+
+	@if $items == 1{
+		$mrow: 0;
+		$wid: 100;
+	}
+
 	margin-left: -+($mrow)+%;
 	margin-right: -+( $mrow )+%;
-//100/$item
+//100/$items
 	#{$tag}, .boxes-cell{
 		margin-left:  ($mrow)+%;
 		margin-right:  ($mrow)+%;
 		//width: ( ($width/$item)+( $item / ( $item * 10) ) )+%;
-		width: ($width/$item)+%;
+		width: $wid+%;
 
 	}
 
