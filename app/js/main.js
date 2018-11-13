@@ -235,7 +235,7 @@
         initialIndex: 1,
         prevNextButtons: true,
         draggable: false,
-        adaptiveHeight: true, 
+        adaptiveHeight: false, 
         wrapAround: ($('.short-news-carousel .carousel-items figure').length >3),
         pageDots: true,
         contain: false,
