@@ -218,6 +218,7 @@
 		}
 		.img{
 			height: 70px;
+			background-size: 65px;
 			background-position: center;
 		}
 		.img.mirror{
@@ -232,6 +233,11 @@
 		}
 		&:hover{
 			color: black;
+			.img.mirror{
+				&~.img{
+					opacity: 0;
+				}
+			}
 			.wrapper{
 				background-color: white;
 				//color: $color-1;

@@ -8632,6 +8632,8 @@ textarea.form-control {
     position: relative; }
   .short-services-items figure .img {
     height: 70px;
+    -webkit-background-size: 65px 65px;
+    background-size: 65px;
     background-position: center; }
   .short-services-items figure .img.mirror {
     position: absolute;
@@ -8644,6 +8646,8 @@ textarea.form-control {
     font-size: 0.95em; }
   .short-services-items figure:hover {
     color: black; }
+    .short-services-items figure:hover .img.mirror ~ .img {
+      opacity: 0; }
     .short-services-items figure:hover .wrapper {
       background-color: white; }
       .short-services-items figure:hover .wrapper .mirror {
