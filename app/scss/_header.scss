@@ -591,6 +591,14 @@ textarea.form-control{
 	input{
 		background-color: white;
 	}
+	.input-content{
+		select{
+			width: 200px;
+		}
+		.placeholder{
+			margin-bottom: 5px;
+		}
+	}
 	.btn-def{
 
 		&:hover{
@@ -603,6 +611,16 @@ textarea.form-control{
 			}
 			margin-top: 10px;
 			margin-bottom: 10px;
+		}
+	}
+}
+
+.form-success{
+	.icon-content{
+		text-align: center;
+		.fa{
+			color: $color-1;
+			font-size: 112px;
 		}
 	}
 }

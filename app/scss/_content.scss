@@ -2,7 +2,18 @@
 	_content.css
 */
 
-
+.fa-star{
+	color: #cfcfcf;
+	&.fill{
+		color: $color-1;
+	}
+}
+.fa-star-o{
+	color: #cfcfcf;
+	&.fill, &:hover{
+		color: $color-1;
+	}
+}
 .drop-sub{
 	position: relative;
 	.drop-sub-box{
@@ -203,6 +214,10 @@
 
 //short-services
 .short-services-items{
+	[class*="ls-service"]{
+		font-size: 60px;
+		transition: all 0.3s ease;
+	}
 	figure{
 		text-align: center;
 		.wrapper{
@@ -237,6 +252,9 @@
 				&~.img{
 					opacity: 0;
 				}
+			}
+			i{
+				color: $color-1;
 			}
 			.wrapper{
 				background-color: white;
@@ -813,6 +831,16 @@
 	select{
 		width: 230px;
 	}
+	@media (max-width: 991px) {
+		flex-direction: column;
+		.scope-item{
+			margin: 15px 0;
+			flex-direction: column;
+			.select2{
+				margin-bottom: 15px;
+			}
+		}
+	}
 	.scope-item{
 		width: 100%;
 		padding-left: 15px;
@@ -855,6 +883,9 @@
 			}
 		}
 	}
+
+}
+.doctors, .doctors-article{
 	.select2-container--default .select2-selection--single{
 		background-color: white;
 	}
@@ -867,29 +898,61 @@
 	.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
 		border-color: transparent transparent black transparent;
 	}
-}
-.select2-dropdown{
-	border: 1px solid #ece9e9;
+	.select2-dropdown{
+		border: 1px solid #ece9e9;
+		z-index: 2323232;
+	}
 }
 .doctors-items{
+	font-family: $font-family-2;
 	.img{
 		width: 200px;
 		height: 267px;
 		background-position: center;
+		margin: auto;
 		background-size: cover;
 	}
 	.desc-content{
 		width: 100%;
+		padding-bottom: 15px;
 	}
 	.cap-content{
 		background-color: #f4f4f4;
 		width: 100%;
 	}
-	figure{
+	.wrapper{
 		display: flex !important;
 		border-radius: 10px;
 		overflow: hidden;
 		box-shadow: 0 0 20px rgba(black, 0.15);
+		.btn-content{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.link{
+				a{
+					color: $color-4;
+					font-weight: 600;
+				}
+			}
+		}
+		@media (max-width: 991px) {
+			flex-direction: column;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			.img{
+				margin-bottom: 15px;
+			}
+			.text-content{
+				padding: 10px 10px;
+			}
+			.btn-content{
+				flex-direction: column;
+				.link{
+					margin-top: 20px;
+				}
+			}
+		}
 	}
 	.cap-content{
 		padding: 20px 20px;
@@ -904,5 +967,139 @@
 			margin-top: 15px;
 			margin-bottom: 15px;
 		}
+	}
+}
+.doctors-article{
+	.doctors-items{
+		z-index: 3;
+		.wrapper{
+			box-shadow: none;
+			border: 1px solid #ebebeb;
+		}
+		@media (min-width: 992px) {
+			padding: 0 30px 30px 0;
+		}
+	}
+	.link-content{
+		a{
+			font-weight: 600;
+			color: $color-4;
+		}
+	}
+}
+.text-item{
+	p{
+		font-family: $font-family-2;
+		line-height: 190%;
+	}
+}
+.rating-content{
+	.star-list{
+		margin-top: 10px;
+	}
+	.fa{
+		font-size: 1.3em;
+	}
+	small{
+		color: $color-gray-3;
+	}
+	li{
+		display: inline-block;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+
+
+//docservices
+.docservices{
+	background-color: #f4f4f4;
+}
+.docservices-accordion{
+	.panel-default{
+		//border-color: transparent;
+		margin-top: 10px;
+		margin-bottom: 0px;
+
+	}
+	.panel-heading{
+		background-color: transparent;
+		padding: 0;
+		h4{
+			text-transform: none;
+		}
+		.fa{
+			position: absolute;
+			right: 15px;
+			top: 14px;
+		}
+		a{
+			display: block;
+			padding: 15px 15px;
+			transition: all 0.3s ease;
+			border-radius: 12px !important;
+			font-size: 14px;
+			font-weight: 700;
+			//border: 1px solid $color-2;
+			background-color: white;
+			display: flex;
+			position: relative;
+			justify-content: space-between;
+			&:before{
+				@extend .clafclear;
+				width: 10px;
+				border-radius: 50%;
+				left: 30px;
+				top: 20px;
+				height: 10px;
+				background-color: $color-1;
+			}
+			.price{
+				min-width: 100px;
+				font-weight: normal;
+			}
+			@media (min-width: 992px) {
+				padding-left: 60px;
+			}
+			@media (max-width: 991px) {
+				&:before{
+					display: none;
+				}
+			}
+			&:not(.collapsed){
+				.fa{
+					transform: rotate(90deg);
+				}
+			}
+		}
+	}
+	.panel-body, .panel-default{
+		border: none !important;
+	}
+}
+
+
+.doctor-reviews{
+	color: black;
+	.short-reviews-content{
+		font-family: $font-family-1;
+		line-height: 190%;
+		font-size: 16px;
+	}	
+}
+
+.docask-form{
+	margin: auto;
+	border-radius: 20px;
+	padding: 15px 30px;
+	background-color: #f6f5f1;
+	label{
+		width: 100%;
+		input, textarea{
+			margin-top: 5px;
+		}
+	}
+	@media (min-width: 992px){
+		padding: 30px 60px;
 	}
 }
