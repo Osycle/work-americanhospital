@@ -885,7 +885,10 @@
 	}
 
 }
-.doctors, .doctors-article{
+.form-checkin, .doctors{
+	.select2-container{
+		border: none;
+	}
 	.select2-container--default .select2-selection--single{
 		background-color: white;
 	}
@@ -898,10 +901,11 @@
 	.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
 		border-color: transparent transparent black transparent;
 	}
-	.select2-dropdown{
-		border: 1px solid #ece9e9;
-		z-index: 2323232;
-	}
+}
+.select2-dropdown{
+	border: 1px solid #ece9e9;
+	z-index: 99993;
+	
 }
 .doctors-items{
 	font-family: $font-family-2;

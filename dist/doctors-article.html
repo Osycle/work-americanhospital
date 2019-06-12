@@ -65,11 +65,8 @@
 						<input class="form-item pie-form-control" type="text" name="" placeholder="Ваш телефон">
 					</div>
 					<div class="input-content m-v-20 clearfix row">
-						<div class="col-md-6 p-h-15">
-							<select class="js-select search-hide">
-								<option>24 мая</option>
-								<option>25 мая</option>
-							</select>
+						<div class="col-md-6 p-h-15 date-input">
+							<input class="form-item pie-form-control" type="text" id="datepicker-select" name="" placeholder="Ваш телефон" onchange="$(this).attr('value', $(this).val());">
 						</div>
 						<div class="col-md-6 p-h-15">
 							<select class="js-select search-hide">

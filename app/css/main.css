@@ -7264,7 +7264,7 @@ table {
 .claf, [data-flicker]:before, .h1-style:not(.h-clear):not(.after-not):after, .h-style-1:after, .h-style-1:before, .checkbox-style-1:before, .fancybox-bg:before, .fancybox-bg:after, .fancybox-is-open .fancybox-bg:before, .fancybox-is-open .fancybox-bg:after {
   content: " "; }
 
-.clafclear, .docservices-accordion .panel-heading a:before {
+.clafclear, .ui-icon-circle-triangle-e:before, .docservices-accordion .panel-heading a:before {
   content: " ";
   height: 100%;
   width: 100%;
@@ -8427,6 +8427,43 @@ textarea.form-control {
     padding-bottom: 15px;
     border-bottom: 1px dotted gray; } }
 
+.date-input {
+  position: relative; }
+
+.ui-datepicker-trigger {
+  border: 0;
+  right: 0;
+  position: absolute;
+  background-color: #f5173c;
+  padding: 10px 15px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  color: white; }
+
+.ui-datepicker-header {
+  background: #f5173c !important;
+  border: none !important; }
+
+.ui-state-default {
+  border: none !important;
+  background: none !important;
+  color: #4e5860 !important; }
+
+.ui-icon-circle-triangle-e {
+  position: relative; }
+  .ui-icon-circle-triangle-e:before {
+    content: "\f105";
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    color: #f5173c;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome !important;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+
 .form-checkin {
   background-color: #f6f5f1;
   -webkit-border-radius: 10px;
@@ -9153,21 +9190,24 @@ textarea.form-control {
         padding-top: 5px;
         padding-bottom: 5px; }
 
-.doctors .select2-container--default .select2-selection--single, .doctors-article .select2-container--default .select2-selection--single {
+.form-checkin .select2-container, .doctors .select2-container {
+  border: none; }
+
+.form-checkin .select2-container--default .select2-selection--single, .doctors .select2-container--default .select2-selection--single {
   background-color: white; }
 
-.doctors .select2-container--default .select2-selection--single .select2-selection__rendered, .doctors-article .select2-container--default .select2-selection--single .select2-selection__rendered {
+.form-checkin .select2-container--default .select2-selection--single .select2-selection__rendered, .doctors .select2-container--default .select2-selection--single .select2-selection__rendered {
   color: black; }
 
-.doctors .select2-container--default .select2-selection--single .select2-selection__arrow b, .doctors-article .select2-container--default .select2-selection--single .select2-selection__arrow b {
+.form-checkin .select2-container--default .select2-selection--single .select2-selection__arrow b, .doctors .select2-container--default .select2-selection--single .select2-selection__arrow b {
   border-color: black transparent transparent transparent; }
 
-.doctors .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b, .doctors-article .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+.form-checkin .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b, .doctors .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
   border-color: transparent transparent black transparent; }
 
-.doctors .select2-dropdown, .doctors-article .select2-dropdown {
+.select2-dropdown {
   border: 1px solid #ece9e9;
-  z-index: 2323232; }
+  z-index: 99993; }
 
 .doctors-items {
   font-family: "Open Sans"; }
